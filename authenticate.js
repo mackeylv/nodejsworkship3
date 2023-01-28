@@ -40,7 +40,7 @@ exports.jwtPassport = passport.use(
 
 //Using jwt strategy & not sessions 
 exports.verifyUser = passport.authenticate('jwt', {session: false});
-//Week 3 Workshop-Task 1: Set up the verifyAdmin() middleware
+//Workshop 3-Task 1: Set up the verifyAdmin() middleware
 exports.verifyAdmin = (req, res, next) => {
     if(req.user.admin) {
         return next();
